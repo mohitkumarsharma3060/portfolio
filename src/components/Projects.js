@@ -9,6 +9,18 @@ const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 const projects = [
   // ... (existing projects above)
+  
+  {
+  title: "Mahalaxmi Tech Services",
+  description:
+    "A modern business website for technology and service solutions featuring responsive UI, service showcases, property listings, contact management, and seamless user experience.",
+  image: "/projects/mahalaxmi.png",
+  technologies: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
+  github: "", // Add your GitHub repo if available
+  live: "", // Add deployed website link
+  category: "nextjs"
+},
+  
   {
     title: "Telco Brush Ware",
     description:
@@ -38,7 +50,18 @@ const projects = [
     github: "", // Add your GitHub repo if available
     live: "", // Add live link if deployed
     category: "java"
-  }
+  },
+  {
+  title: "PHP Voting System",
+  description:
+    "A full-stack online voting platform developed using PHP and MySQL with secure login authentication, party management, voter registration, admin dashboard, vote counting, and real-time result tracking.",
+  image: "/projects/voting.png",
+  technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+  github: "",
+  live: "",
+  category: "php"
+}
+
   
 ];
 
@@ -47,7 +70,7 @@ const projects = [
     <>
     <section id="projects" className="relative py-16 px-4 min-h-screen flex items-center">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden bg-blue-600">
+      <div className="absolute inset-0 overflow-hidden bg-gray-950">
         <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-l from-purple-900/30 to-blue-900/30 blur-3xl transform -rotate-12 animate-pulse"></div>
         <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-pink-900/30 to-cyan-900/30 blur-3xl transform rotate-12 animate-pulse"></div>
       </div>

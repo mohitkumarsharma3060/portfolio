@@ -1,111 +1,187 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { IoMdMail } from "react-icons/io";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+} from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
 
 const Hero = () => {
+  const stats = [
+    { num: '8+', label: 'Products shipped' },
+    { num: '15+', label: 'APIs engineered' },
+    { num: '1.5Y', label: 'Production Experience' },
+    { num: '200+', label: 'Problems Solved' },
+  ];
+
   const socialLinks = [
     {
       name: 'GitHub',
       url: 'https://github.com/mohitkumarsharma3060/',
       icon: FaGithub,
-      color: 'hover:text-gray-400'
+      color: 'hover:text-slate-300',
     },
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/mohitkumarsharmadev/',
       icon: FaLinkedin,
-      color: 'hover:text-blue-400'
+      color: 'hover:text-blue-400',
     },
     {
       name: 'Twitter',
-      url: 'https://x.com/ibhaveshbishnoi',
+      url: 'https://x.com/mohitsharma3060',
       icon: FaTwitter,
-      color: 'hover:text-sky-400'
-    }
+      color: 'hover:text-cyan-400',
+    },
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-16 px-4">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden bg-blue-600">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-blue-900/30 to-purple-900/30 blur-3xl transform -rotate-12 animate-pulse"></div>
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-l from-pink-900/30 to-cyan-900/30 blur-3xl transform rotate-12 animate-pulse"></div>
+    <section className="relative min-h-screen overflow-hidden bg-[#050816] text-white pt-28 lg:pt-32">
+
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-[-20%] left-[-10%] h-[450px] w-[450px] rounded-full bg-blue-500/20 blur-[120px]" />
+
+        <div className="absolute bottom-[-20%] right-[-10%] h-[450px] w-[450px] rounded-full bg-purple-500/20 blur-[120px]" />
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          
-          {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <div className="backdrop-blur-xl bg-gray-800/40 p-8 rounded-2xl border border-gray-700/50 shadow-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Hi, I&apos;m{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 lg:px-10">
+
+        <div className="grid w-full items-center gap-16 lg:grid-cols-2">
+
+          {/* LEFT CONTENT */}
+          <div className="space-y-8">
+
+            {/* Badge */}
+            <div>
+              <span className="rounded-full border py-2 border-blue-500/20 bg-blue-500/10 px-5  text-sm font-medium text-blue-300 backdrop-blur-xl">
+                Full Stack Developer
+              </span>
+            </div>
+
+            {/* Heading */}
+            <div className="space-y-5">
+              <h1 className="text-4xl font-bold leading-tight md:text-4xl lg:text-5xl">
+                Hi, I’m
+                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Mohit Kumar Sharma
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Full Stack Developer & Technology Enthusiast
-              </p>
-              <p className="text-gray-400 mb-8 max-w-2xl">
-                I craft beautiful, responsive, and user-friendly web applications using modern technologies.
-                Let&apos;s turn your ideas into reality!
-              </p>
-              
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Link href="#contact" className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
-                  Get in Touch
-                </Link>
-                <Link href="#projects" className="px-8 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-lg hover:scale-105 transition-all duration-300">
-                  View Projects
-                </Link>
-              </div>
+
+              <h2 className="text-xl text-slate-300 md:text-2xl">
+                Full Stack Developer &
+                <span className="text-cyan-400">
+                  {' '}Technology Enthusiast
+                </span>
+              </h2>
             </div>
 
-            {/* Social Links */}
-            <div id="home" className="mt-8 flex gap-6 justify-center lg:justify-start">
+            {/* Description */}
+            <p className="max-w-2xl text-lg leading-8 text-slate-400">
+              I craft beautiful, scalable and
+              high-performance web applications
+              using modern technologies.
+              Focused on building premium digital
+              experiences with clean UI and
+              exceptional user experience.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={() => {
+                  document
+                    .getElementById('contact')
+                    ?.scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                }}
+                className="rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 font-semibold shadow-lg shadow-blue-500/20 transition duration-300 hover:scale-105"
+              >
+                Get in Touch
+              </button>
+
+              <Link
+                href="#projects"
+                className="rounded-2xl border border-white/10 bg-white/5 px-8 py-4 font-semibold backdrop-blur-xl transition duration-300 hover:bg-white/10"
+              >
+                View Projects
+              </Link>
+            </div>
+
+            {/* Social */}
+            <div className="flex items-center gap-6 pt-2">
               {socialLinks.map((social) => (
                 <Link
                   key={social.name}
                   href={social.url}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-white ${social.color} transform hover:scale-110 transition-all duration-300`}
+                  className={`text-slate-300 transition duration-300 hover:scale-110 ${social.color}`}
                 >
-                  <social.icon className="w-8 h-8" />
+                  <social.icon className="h-7 w-7" />
                 </Link>
               ))}
+
               <Link
                 href="mailto:mohitkumarsharma3060@gmail.com"
-                className="text-white hover:text-red-500 transform hover:scale-110 transition-all duration-300"
+                className="text-slate-300 transition duration-300 hover:scale-110 hover:text-red-400"
               >
-                <IoMdMail className="w-8 h-8" />
+                <IoMdMail className="h-7 w-7" />
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-5 pt-6 md:grid-cols-4">
+              {stats.map((item, i) => (
+                <div
+                  key={i}
+                  className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-white/10"
+                >
+                  <h3 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-3xl font-bold text-transparent">
+                    {item.num}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-slate-400">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Profile Image */}
-          <div className="relative">
-            <div className="relative w-54 h-54 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-              <div className="relative rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm shadow-2xl">
+          {/* RIGHT IMAGE */}
+          <div className="relative flex justify-center">
+
+            {/* Glow */}
+            <div className="absolute h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[100px]" />
+
+            {/* Orbit Ring 1 */}
+            <div className="absolute h-[420px] w-[420px] rounded-full border border-cyan-400/20 animate-spin [animation-duration:15s]" />
+
+            {/* Orbit Ring 2 */}
+            <div className="absolute h-[500px] w-[500px] rounded-full border border-dashed border-purple-400/20 animate-spin [animation-duration:22s]" />
+
+            {/* Orbit Ring 3 */}
+            <div className="absolute h-[580px] w-[580px] rounded-full border border-blue-500/10 animate-spin [animation-duration:30s]" />
+
+            {/* Profile Card */}
+            <div className="relative h-[320px] w-[320px] overflow-hidden rounded-[40px] border border-white/10 bg-white/5 p-2 backdrop-blur-xl shadow-[0_0_60px_rgba(59,130,246,0.2)] md:h-[380px] md:w-[380px] lg:h-[420px] lg:w-[420px]">
+
+              <div className="relative h-full w-full overflow-hidden rounded-[32px]">
                 <Image
                   src="/profile.jpg"
                   alt="Mohit Kumar Sharma"
-                  width={384}
-                  height={384}
-                  className="object-cover hover:scale-110 transition-transform duration-500"
+                  fill
                   priority
+                  className="object-cover transition duration-700 hover:scale-105"
                 />
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

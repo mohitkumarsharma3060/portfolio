@@ -19,10 +19,12 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log(formData);
-  };
+  e.preventDefault();
+
+  alert("Thank you for contacting us!");
+
+  console.log("Form Submitted");
+};
 
   const socialLinks = [
     {

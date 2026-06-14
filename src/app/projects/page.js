@@ -19,6 +19,16 @@ const ProjectsPage = () => {
   ];
   
 const projects = [
+   {
+  title: "Mahalaxmi Tech Services",
+  description:
+    "A modern business website for technology and service solutions featuring responsive UI, service showcases, property listings, contact management, and seamless user experience.",
+  image: "/projects/mahalaxmi.png",
+  technologies: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
+  github: "", // Add your GitHub repo if available
+  live: "", // Add deployed website link
+  category: "nextjs"
+},
   {
     title: "Telco Brush Ware",
     description:
@@ -37,7 +47,7 @@ const projects = [
     technologies: ["Next.js", "Node.js"],
     github: "", // Add your GitHub repo if available
     live: "", // Add live link if deployed
-    category: "nextjs"
+    category: "javascript"
   },
   {
     title: "Electricity Billing System",
@@ -48,7 +58,17 @@ const projects = [
     github: "", // Add your GitHub repo if available
     live: "", // Add live link if deployed
     category: "java"
-  }
+  },
+  {
+  title: "PHP Voting System",
+  description:
+    "A full-stack online voting platform developed using PHP and MySQL with secure login authentication, party management, voter registration, admin dashboard, vote counting, and real-time result tracking.",
+  image: "/projects/voting.png",
+  technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+  github: "",
+  live: "",
+  category: "php"
+}
  
 ];
 
@@ -57,7 +77,7 @@ const projects = [
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <main className="min-h-screen pt-24 pb-16  bg-blue-600 px-4">
+    <main className="min-h-screen pt-24 pb-16  bg-gray-950 px-4">
       {/* Category Filters */}
       <div className="max-w-7xl mx-auto mb-8 md:mb-12">
         <h1 className="text-4xl font-bold text-center text-white mb-6 md:mb-8">My Projects</h1>

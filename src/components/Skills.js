@@ -65,6 +65,26 @@ const Skills = () => {
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
       color: "from-indigo-400/20 to-indigo-600/20 border-indigo-500/50",
     },
+    {
+      name: "Java",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      color: "from-orange-400/20 to-red-600/20 border-orange-500/50",
+    },
+    {
+      name: "TypeScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      color: "from-blue-400/20 to-blue-600/20 border-blue-500/50",
+    },
+    {
+      name: "System Design",
+      logo: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+      color: "from-cyan-400/20 to-cyan-600/20 border-cyan-500/50",
+    },
+    {
+      name: "GitHub",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      color: "from-gray-400/20 to-gray-700/20 border-gray-500/50",
+    },
   ];
 
   return (

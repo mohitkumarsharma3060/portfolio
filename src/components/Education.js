@@ -17,7 +17,11 @@ const Education = () => {
         "Data Structures & Algorithms",
         "Web Development",
         "Database Management",
-        "Software Engineering"
+        "Software Engineering",
+        "Computer Networks",
+        "Operating Systems",
+        "Artificial Intelligence",
+        "Machine Learning"
       ]
     },
     {
@@ -38,7 +42,7 @@ const Education = () => {
   return (
     <section id="education" className="relative py-16 px-4 min-h-screen flex items-center">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden bg-blue-700">
+      <div className="absolute inset-0 overflow-hidden bg-gray-950">
         <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-l from-indigo-900/30 to-purple-900/30 blur-3xl transform rotate-12 animate-pulse"></div>
         <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-blue-900/30 to-cyan-900/30 blur-3xl transform -rotate-12 animate-pulse"></div>
       </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
   const isHome = pathname === '/';
 
   const navItems = [
-    { name: 'Home', href: isHome ? '#home' : '/' },
+   
     { name: 'Skills', href: isHome ? '#skills' : '/#skills' },
     { name: 'Projects', href: isHome ? '#projects' : '/projects' },
     { name: 'Experience', href: isHome ? '#experience' : '/#experience' },
