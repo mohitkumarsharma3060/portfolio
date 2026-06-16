@@ -55,7 +55,7 @@ const projects = [
   title: "PHP Voting System",
   description:
     "A full-stack online voting platform developed using PHP and MySQL with secure login authentication, party management, voter registration, admin dashboard, vote counting, and real-time result tracking.",
-  image: "/projects/voting.png",
+  image: "/projects/voting1.png",
   technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
   github: "",
   live: "",

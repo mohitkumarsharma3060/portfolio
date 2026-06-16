@@ -81,14 +81,11 @@ const Hero = () => {
 
             {/* Description */}
             <p className="max-w-2xl text-lg leading-8 text-slate-400">
-              I craft beautiful, scalable and
-              high-performance web applications
-              using modern technologies.
-              Focused on building premium digital
-              experiences with clean UI and
-              exceptional user experience.
+              Building world-class digital experiences with
+              precision, performance, and modern engineering.
+              Specialized in creating visually refined, scalable,
+              and user-centric web applications.
             </p>
-
             {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               <button
